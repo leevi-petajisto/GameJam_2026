@@ -118,22 +118,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"move",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7amf"]
-radius = 5.0
-height = 16.0
+radius = 7.0
+height = 18.0
 
 [node name="kroko" type="CharacterBody2D"]
+safe_margin = 2.0
 script = ExtResource("1_r3cst")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.5, -9.5)
 scale = Vector2(0.95, 0.95)
 sprite_frames = SubResource("SpriteFrames_l64nq")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(2, -8)
 shape = SubResource("CapsuleShape2D_t7amf")
