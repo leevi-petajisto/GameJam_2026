@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dscyoh5rp6di0"]
+
+[ext_resource type="Texture2D" uid="uid://ca2r1803yheyb" path="res://Art/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_a8dbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dinum"]
+size = Vector2(171, 20)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a8dbq")
+region_enabled = true
+region_rect = Rect2(754.04517, 14.110743, 171.742, 20.328642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_dinum")
