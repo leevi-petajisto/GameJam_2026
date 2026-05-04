@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Knight
+class_name Kroko
 
 @export var _speed : float = 100
 @export var _jump_velocity : float = 200
@@ -25,15 +25,10 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	# 1. Lisää painovoima
 	_apply_gravity(delta)
-	# 2. Reagoi hyppyyn
 	_handle_jump()
-	# 3. Reagoi liikkeeseen
 	_handle_move()
-	# 4. Päivitä animaatiot
 	_update_animations()
-	# 5. Välitä tiedot fysiikka moottorille
 	move_and_slide()
 
 func _apply_gravity(delta : float) -> void:
@@ -59,8 +54,9 @@ func _update_animations() -> void:
 	if Input.is_action_just_pressed("Jump"):
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.play("jump")
-		#Halusimme hyppyanimaation pyörivän vain tuplahypyssä
+	
 	if is_on_floor() and velocity.x == 0:
 		$AnimatedSprite2D.play("idle")
+		
 	if is_on_floor() and velocity.x != 0 and _is_jumping == false:
 		$AnimatedSprite2D.play("move")
