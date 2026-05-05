@@ -3,6 +3,7 @@ class_name Kroko
 
 @export var _speed : float = 100
 @export var _jump_velocity : float = 200
+@export var _interaction : bool = false
 @onready var _animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
@@ -11,6 +12,7 @@ class_name Kroko
 var _horizontal_input : float = 0
 var _is_jumping : bool = false
 var _jump_counter : float = 0
+
 
 #endregion
 
@@ -60,3 +62,18 @@ func _update_animations() -> void:
 		
 	if is_on_floor() and velocity.x != 0 and _is_jumping == false:
 		$AnimatedSprite2D.play("move")
+		
+		
+"""
+func teleport():
+	if Input.is_action_just_pressed("Pipe_Enter"):
+		_interaction = true
+		print("reagoi")
+			
+		if _interaction == true:
+			self.set_position($Destination.global_position)
+		else:
+			print("Ei toimi")
+	if Input.is_action_just_released("Pipe_Enter"):
+			_interaction = false
+"""

@@ -125,7 +125,7 @@ animations = [{
 radius = 7.0
 height = 18.0
 
-[node name="kroko" type="CharacterBody2D"]
+[node name="kroko" type="CharacterBody2D" groups=["Player"]]
 safe_margin = 2.0
 script = ExtResource("1_r3cst")
 

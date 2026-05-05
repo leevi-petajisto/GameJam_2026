@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxvbsv23o3veo"]
+
+[ext_resource type="Script" uid="uid://ivkngty1omif" path="res://Code/putket.gd" id="1_8wp10"]
+[ext_resource type="Texture2D" uid="uid://bhh0syh6jq3gi" path="res://Art/Eettinen_Tuotanto/putkisetti.png" id="1_c8p02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wp10"]
+size = Vector2(16, 16)
+
+[node name="Putket" type="Area2D"]
+script = ExtResource("1_8wp10")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c8p02")
+region_enabled = true
+region_rect = Rect2(4, 32, 24, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_8wp10")
+
+[node name="Destination" type="Marker2D" parent="."]
+position = Vector2(0, -26)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
