@@ -2,6 +2,7 @@ extends Area2D
 
 var can_teleport = false
 var player_body = null
+@export var target = 1
 
 func _process(_delta):
 	# Check if player is in area AND presses action button
@@ -11,7 +12,10 @@ func _process(_delta):
 
 func teleport():
 	# Use set_deferred to avoid physics errors
-	player_body.global_position = $Destination.global_position
+	if target == 1:
+		player_body.global_position = $Destination1.global_position
+	else:
+		player_body.global_position = $Destination2.global_position
 
 func _on_body_entered(body):
 	# Assumes player is in a group named "Player"
