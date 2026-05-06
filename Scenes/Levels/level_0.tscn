@@ -4815,7 +4815,7 @@ position = Vector2(-31, -29)
 position = Vector2(32, -30)
 
 [node name="Nappi" parent="Putket" index="4"]
-position = Vector2(77, -7)
+position = Vector2(78, 1)
 
 [node name="Voittoputki" parent="." instance=ExtResource("7_hvs5j")]
 z_index = -1
