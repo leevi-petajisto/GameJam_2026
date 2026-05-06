@@ -11,4 +11,4 @@ tile_map_data = PackedByteArray("AADu/xcAAAABAAAAAADv/xcAAAABAAAAAADw/xcAAAABAAA
 tile_set = ExtResource("1_ucdhh")
 
 [node name="kroko" parent="." instance=ExtResource("2_oylv5")]
-position = Vector2(145, 241)
+position = Vector2(34, 627)
