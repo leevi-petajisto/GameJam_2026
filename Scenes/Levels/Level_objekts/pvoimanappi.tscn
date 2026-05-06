@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://r0ylpq4s03c6"]
+
+[ext_resource type="Script" uid="uid://bp42s7hqpdnli" path="res://Code/pvoimanappi.gd" id="1_h1kcs"]
+[ext_resource type="Texture2D" uid="uid://bhh0syh6jq3gi" path="res://Art/Eettinen_Tuotanto/putkisetti.png" id="1_qrnrg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1kcs"]
+atlas = ExtResource("1_qrnrg")
+region = Rect2(32, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvgmo"]
+atlas = ExtResource("1_qrnrg")
+region = Rect2(32, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r6wj"]
+atlas = ExtResource("1_qrnrg")
+region = Rect2(48, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euntn"]
+atlas = ExtResource("1_qrnrg")
+region = Rect2(48, 17, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv37h"]
+atlas = ExtResource("1_qrnrg")
+region = Rect2(32, 17, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61yyj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1kcs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvgmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r6wj")
+}],
+"loop": false,
+"name": &"interact_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euntn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv37h")
+}],
+"loop": false,
+"name": &"interact_2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrnrg"]
+size = Vector2(8, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvgmo"]
+size = Vector2(20, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r6wj"]
+size = Vector2(20, 41.5)
+
+[node name="pvoimanappi" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_h1kcs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_61yyj")
+animation = &"interact_2"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_qrnrg")
+
+[node name="Käytävä1" type="Area2D" parent="."]
+position = Vector2(-22, -6)
+gravity_space_override = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Käytävä1"]
+shape = SubResource("RectangleShape2D_pvgmo")
+
+[node name="Käytävä2" type="Area2D" parent="."]
+position = Vector2(22, -6)
+gravity_space_override = 3
+gravity = -980.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Käytävä2"]
+shape = SubResource("RectangleShape2D_0r6wj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://bxtnydtakl1f3"]
+[gd_scene load_steps=6 format=4 uid="uid://bqcl0j80ye5eb"]
+
+[ext_resource type="PackedScene" uid="uid://c2fxwowbrcga8" path="res://Scenes/Characters/kroko.tscn" id="1_1ih7c"]
+[ext_resource type="TileSet" uid="uid://f6goe5woacvv" path="res://Scenes/Levels/Level_objekts/platforms.tres" id="1_ic72l"]
+[ext_resource type="PackedScene" uid="uid://r0ylpq4s03c6" path="res://Scenes/Levels/Level_objekts/pvoimanappi.tscn" id="3_r74qd"]
+[ext_resource type="PackedScene" uid="uid://bxvbsv23o3veo" path="res://Scenes/Levels/Level_objekts/putket.tscn" id="6_35opv"]
+[ext_resource type="PackedScene" uid="uid://bscmx80tp1nr0" path="res://Scenes/Levels/Level_objekts/voittoputki.tscn" id="7_hvs5j"]
 
 [node name="Level0" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIABEAAAAAAAQAAAAJABEAAAAAAAQAAAAKABEAAAAAAAQAAAALABEAAAAAAAQAAAAMABEAAAAAAAQAAAANABEAAAAAAAQAAAAOABEAAAAAAAQAAAAPABEAAAAAAAQAAAAQABEAAAAAAAQAAAARABEAAAAAAAQAAAASABEAAAAAAAQAAAATABEAAAAAAAQAAAAUABEAAAAAAAQAAAAVABEAAAAAAAQAAAAWABEAAAAAAAQAAAAXABEAAAAAAAQAAAAYABEAAAAAAAQAAAAZABEAAAAAAAQAAAAaABEAAAAAAAQAAAAbABEAAAAAAAQAAAAcABEAAAAAAAQAAAAdABEAAAAAAAQAAAAeABEAAAAAAAQAAAAfABEAAAAAAAQAAAAgABEAAAAAAAQAAAAhABEAAAAAAAQAAAAiABEAAAAAAAQAAAAjABEAAAAAAAQAAAAkABEAAAAAAAQAAAAlABEAAAAAAAQAAAAmABEAAAAAAAQAAAAnABEAAAAAAAQAAAAoABEAAAAAAAQAAAApABEAAAAAAAQAAAAqABEAAAAAAAQAAAArABEAAAAAAAQAAAAsABEAAAAAAAQAAAAtABEAAAAAAAQAAAA=")
+tile_set = ExtResource("1_ic72l")
+
+[node name="kroko" parent="." instance=ExtResource("1_1ih7c")]
+position = Vector2(174, 250)
+
+[node name="Putket" parent="." instance=ExtResource("6_35opv")]
+position = Vector2(231, 272)
+scale = Vector2(2, 2)
+
+[node name="Destination1" parent="Putket" index="2"]
+position = Vector2(-42.5, -33)
+
+[node name="Destination2" parent="Putket" index="3"]
+position = Vector2(216, -36.5)
+
+[node name="Nappi" parent="Putket" index="4"]
+position = Vector2(54.5, 0)
+
+[node name="Voittoputki" parent="Putket" instance=ExtResource("7_hvs5j")]
+position = Vector2(211, -0.5)
+
+[node name="pvoimanappi" parent="." instance=ExtResource("3_r74qd")]
+position = Vector2(453, 259)
+
+[editable path="Putket"]
+[editable path="pvoimanappi"]
