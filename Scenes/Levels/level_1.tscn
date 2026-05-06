@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=4 uid="uid://crycrnsynre7d"]
+
+[ext_resource type="TileSet" uid="uid://f6goe5woacvv" path="res://Scenes/Levels/Level_objekts/platforms.tres" id="1_iixi8"]
+[ext_resource type="PackedScene" uid="uid://c2fxwowbrcga8" path="res://Scenes/Characters/kroko.tscn" id="2_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://bxvbsv23o3veo" path="res://Scenes/Levels/Level_objekts/putket.tscn" id="3_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://bscmx80tp1nr0" path="res://Scenes/Levels/Level_objekts/voittoputki.tscn" id="4_iixi8"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Lepakot" type="TileMapLayer" parent="."]
+rotation = -3.1415927
+tile_map_data = PackedByteArray("AADl//X/AAABAAYAAADi//X/AAABAAYAAADd//X/AAABAAYAAADX//X/AAABAAYAAADf//X/AAABAAYAAADP//X/AAABAAYAAADv//X/AAABAAYAAADP//D/AAABAAYAAADZ//D/AAABAAYAAAA=")
+tile_set = ExtResource("1_iixi8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAATABQAAAABAAAAAAAdABQAAAABAAAAAAAnABQAAAABAAAAAAAQABQAAAAAAAAAAAAQABUAAAAAAAEAAAARABQAAAABAAAAAAARABUAAAABAAEAAAASABQAAAABAAAAAAASABUAAAABAAEAAAATABUAAAABAAEAAAAUABQAAAABAAAAAAAUABUAAAABAAEAAAAVABQAAAABAAAAAAAVABUAAAABAAEAAAAWABQAAAABAAAAAAAWABUAAAABAAEAAAAXABQAAAABAAAAAAAXABUAAAABAAEAAAAYABQAAAABAAAAAAAYABUAAAABAAEAAAAZABQAAAABAAAAAAAZABUAAAABAAEAAAAaABQAAAABAAAAAAAaABUAAAABAAEAAAAbABQAAAABAAAAAAAbABUAAAABAAEAAAAcABQAAAABAAAAAAAcABUAAAABAAEAAAAdABUAAAABAAEAAAAeABQAAAABAAAAAAAeABUAAAABAAEAAAAfABQAAAABAAAAAAAfABUAAAABAAEAAAAgABQAAAABAAAAAAAgABUAAAABAAEAAAAhABQAAAABAAAAAAAhABUAAAABAAEAAAAiABQAAAABAAAAAAAiABUAAAABAAEAAAAjABQAAAABAAAAAAAjABUAAAABAAEAAAAkABQAAAABAAAAAAAkABUAAAABAAEAAAAlABQAAAABAAAAAAAlABUAAAABAAEAAAAmABQAAAABAAAAAAAmABUAAAABAAEAAAAnABUAAAABAAEAAAAoABQAAAABAAAAAAAoABUAAAABAAEAAAApABQAAAABAAAAAAApABUAAAABAAEAAAAqABQAAAABAAAAAAAqABUAAAABAAEAAAArABQAAAABAAAAAAArABUAAAABAAEAAAAsABQAAAABAAAAAAAsABUAAAABAAEAAAAtABQAAAABAAAAAAAtABUAAAABAAEAAAAuABQAAAABAAAAAAAuABUAAAABAAEAAAAvABQAAAABAAAAAAAvABUAAAABAAEAAAAwABQAAAABAAAAAAAwABUAAAABAAEAAAAxABQAAAABAAAAAAAxABUAAAABAAEAAAAyABQAAAABAAAAAAAyABUAAAABAAEAAAAzABQAAAABAAAAAAAzABUAAAABAAEAAAA0ABQAAAABAAAAAAA0ABUAAAABAAEAAAA1ABQAAAABAAAAAAA1ABUAAAABAAEAAAApABIAAAADAAAAAAApABMAAAADAAEAAAAqABIAAAAEAAAAAAAqABMAAAAEAAEAAAApABAAAAADAAAAAAApABEAAAADAAEAAAAqABAAAAAEAAAAAAAqABEAAAAEAAEAAAAnABAAAAADAAAAAAAnABEAAAADAAAAAAAoABAAAAAEAAAAAAAoABEAAAAEAAAAAAAnABIAAAADAAAAAAAoABIAAAAEAAAAAAAnABMAAAADAAEAAAAoABMAAAAEAAEAAAAnAA4AAAADAAAAAAAnAA8AAAADAAEAAAAoAA4AAAAEAAAAAAAoAA8AAAAEAAEAAAApAA4AAAADAAAAAAApAA8AAAADAAEAAAAqAA4AAAAEAAAAAAAqAA8AAAAEAAEAAAAQAAgAAAABAAAAAAAQAAkAAAABAAEAAAARAAgAAAABAAAAAAARAAkAAAABAAEAAAASAAgAAAABAAAAAAASAAkAAAABAAEAAAATAAgAAAABAAAAAAATAAkAAAABAAEAAAAUAAgAAAABAAAAAAAUAAkAAAABAAEAAAAVAAgAAAABAAAAAAAVAAkAAAABAAEAAAAWAAgAAAABAAAAAAAWAAkAAAABAAEAAAAXAAgAAAABAAAAAAAXAAkAAAABAAEAAAAYAAgAAAABAAAAAAAYAAkAAAABAAEAAAAZAAgAAAABAAAAAAAZAAkAAAABAAEAAAAaAAgAAAABAAAAAAAaAAkAAAABAAEAAAAbAAgAAAABAAAAAAAbAAkAAAABAAEAAAAcAAgAAAABAAAAAAAcAAkAAAABAAEAAAAdAAgAAAABAAAAAAAdAAkAAAABAAEAAAAeAAgAAAABAAAAAAAeAAkAAAABAAEAAAAfAAgAAAABAAAAAAAfAAkAAAABAAEAAAAgAAgAAAABAAAAAAAgAAkAAAABAAEAAAAhAAgAAAABAAAAAAAhAAkAAAABAAEAAAAiAAgAAAABAAAAAAAiAAkAAAABAAEAAAAjAAgAAAABAAAAAAAjAAkAAAABAAEAAAAkAAgAAAABAAAAAAAkAAkAAAABAAEAAAAlAAgAAAABAAAAAAAlAAkAAAABAAEAAAAmAAgAAAABAAAAAAAmAAkAAAABAAEAAAAnAAgAAAABAAAAAAAnAAkAAAABAAEAAAAoAAgAAAABAAAAAAAoAAkAAAABAAEAAAApAAgAAAABAAAAAAApAAkAAAABAAEAAAAqAAgAAAABAAAAAAAqAAkAAAABAAEAAAArAAgAAAABAAAAAAArAAkAAAABAAEAAAAsAAgAAAABAAAAAAAsAAkAAAABAAEAAAAtAAgAAAABAAAAAAAtAAkAAAABAAEAAAAuAAgAAAABAAAAAAAuAAkAAAABAAEAAAAvAAgAAAABAAAAAAAvAAkAAAABAAEAAAAwAAgAAAABAAAAAAAwAAkAAAABAAEAAAAxAAgAAAABAAAAAAAxAAkAAAABAAEAAAAyAAgAAAABAAAAAAAyAAkAAAABAAEAAAAzAAgAAAABAAAAAAAzAAkAAAABAAEAAAA0AAgAAAABAAAAAAA0AAkAAAABAAEAAAA1AAgAAAABAAAAAAA1AAkAAAABAAEAAAAxABMAAAAAAAIAAAAxABIAAAAAAAIAAAAxABEAAAAAAAIAAAAxABAAAAAAAAIAAAAxAA8AAAAAAAIAAAAxAA4AAAABAAMAAAAwAA4AAAABAAMAAAAvAA4AAAABAAMAAAAuAA4AAAABAAMAAAA=")
+tile_set = ExtResource("1_iixi8")
+
+[node name="kroko" parent="." instance=ExtResource("2_3mqfk")]
+position = Vector2(282, 309)
+
+[node name="Voittoputki" parent="." instance=ExtResource("4_iixi8")]
+z_index = -1
+position = Vector2(840, 320)
+
+[node name="putket" type="Node2D" parent="."]
+
+[node name="Putket2" parent="putket" instance=ExtResource("3_3mqfk")]
+z_index = -1
+position = Vector2(317, 164)
+rotation = 3.1415925
+
+[node name="Destination1" parent="putket/Putket2" index="2"]
+position = Vector2(-1.9073486e-06, 2.000002)
+
+[node name="Destination2" parent="putket/Putket2" index="3"]
+visible = false
+
+[node name="Nappi" parent="putket/Putket2" index="4"]
+visible = false
+
+[node name="Putket" parent="putket" instance=ExtResource("3_3mqfk")]
+z_index = -1
+position = Vector2(504, 314)
+
+[node name="Destination1" parent="putket/Putket" index="2"]
+position = Vector2(-189, -153)
+
+[node name="Destination2" parent="putket/Putket" index="3"]
+position = Vector2(244, -70)
+
+[node name="Nappi" parent="putket/Putket" index="4"]
+position = Vector2(92, 8)
+
+[node name="Putket3" parent="putket" instance=ExtResource("3_3mqfk")]
+z_index = -1
+position = Vector2(773, 314)
+
+[node name="Destination1" parent="putket/Putket3" index="2"]
+position = Vector2(-458, -150)
+
+[node name="Destination2" parent="putket/Putket3" index="3"]
+position = Vector2(65, -153)
+
+[node name="Nappi" parent="putket/Putket3" index="4"]
+position = Vector2(-70, 7)
+
+[node name="Putket4" parent="putket" instance=ExtResource("3_3mqfk")]
+position = Vector2(750, 246)
+rotation = 3.1415925
+
+[node name="Sprite2D" parent="putket/Putket4" index="0"]
+z_index = -1
+
+[node name="Destination1" parent="putket/Putket4" index="2"]
+position = Vector2(-1.9073486e-06, -2.999998)
+
+[node name="Destination2" parent="putket/Putket4" index="3"]
+visible = false
+position = Vector2(51.999992, 55)
+
+[node name="Nappi" parent="putket/Putket4" index="4"]
+visible = false
+
+[node name="Putket5" parent="putket" instance=ExtResource("3_3mqfk")]
+position = Vector2(840, 163)
+rotation = 3.1415925
+
+[node name="Sprite2D" parent="putket/Putket5" index="0"]
+z_index = -1
+
+[node name="Destination1" parent="putket/Putket5" index="2"]
+position = Vector2(-1.0000019, -0.9999981)
+
+[node name="Destination2" parent="putket/Putket5" index="3"]
+visible = false
+
+[node name="Nappi" parent="putket/Putket5" index="4"]
+visible = false
+
+[node name="Backgroundprops" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAAbABMAAAAAAAUAAAAoAA0AAAABAAUAAAAwAA0AAAABAAUAAAAYABMAAAABAAUAAAAUABMAAAACAAQAAAA=")
+tile_set = ExtResource("1_iixi8")
+
+[editable path="putket/Putket2"]
+[editable path="putket/Putket"]
+[editable path="putket/Putket3"]
+[editable path="putket/Putket4"]
+[editable path="putket/Putket5"]
