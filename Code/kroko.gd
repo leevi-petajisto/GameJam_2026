@@ -26,6 +26,7 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	_animated_sprite_2d.scale.y = -1 if get_gravity().y < 0 else 1
 	_apply_gravity(delta)
 	_handle_jump()
 	_handle_move()
@@ -33,16 +34,19 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _apply_gravity(delta : float) -> void:
-	if not is_on_floor(): 
+	var grounded := is_on_ceiling() if get_gravity().y < 0 else is_on_floor()
+	if not grounded:
 		velocity += get_gravity() * delta
 
 func _handle_jump() -> void:
 	if _is_jumping and _jump_counter == 0:
-		velocity.y = -_jump_velocity
 		_is_jumping = false
+		var gravity_dir: float = sign(get_gravity().y)
+		velocity.y = -gravity_dir * _jump_velocity
 		_jump_counter += 1
-	if is_on_floor():
-		_jump_counter = 0 
+	var grounded := is_on_ceiling() if get_gravity().y < 0 else is_on_floor()
+	if grounded:
+		_jump_counter = 0
 	
 func _handle_move() -> void:
 	if is_zero_approx(_horizontal_input):
