@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8k3lwfbbv2aj"]
+
+[ext_resource type="Script" uid="uid://bdmu50njvsvg8" path="res://Code/main_menu.gd" id="1_6pxni"]
+[ext_resource type="Texture2D" uid="uid://cch3s3cgkkvtq" path="res://Art/Eettinen_Tuotanto/33064246695_b54602a455_o.jpg" id="1_dlmu3"]
+[ext_resource type="FontFile" uid="uid://bam0gvs6uqso4" path="res://Art/Eettinen_Tuotanto/DeltaBlock-Regular.ttf" id="2_6pxni"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_invnu"]
+texture = ExtResource("1_dlmu3")
+modulate_color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mqo"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6o43"]
+bg_color = Color(0.69965345, 0.6996535, 0.6996533, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlmu3"]
+bg_color = Color(0.51718444, 0.5171845, 0.5171844, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71mqo"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pxni")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_invnu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.61959875
+anchor_right = 0.5
+anchor_bottom = 0.61959875
+offset_left = -110.75
+offset_top = -66.5
+offset_right = 110.75
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6o43")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
+text = "Aloita Peli"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6o43")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dlmu3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
+text = "Sulje Peli"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_top = 103.0
+offset_right = 207.0
+offset_bottom = 206.5
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_6pxni")
+theme_override_font_sizes/font_size = 42
+text = "Super Krökö Brothers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
