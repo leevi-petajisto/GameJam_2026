@@ -117,29 +117,32 @@ position = Vector2(225, -448)
 position = Vector2(-401, -4)
 
 [node name="kroko" parent="." instance=ExtResource("2_nfly3")]
-position = Vector2(429, 188)
+position = Vector2(376, 473)
 
 [node name="pvoimanappi" parent="." instance=ExtResource("6_yy6i0")]
+position = Vector2(335, -246)
 
 [node name="AnimatedSprite2D" parent="pvoimanappi" index="0"]
 position = Vector2(187, 249.5)
+rotation = 3.1415927
 
 [node name="CollisionShape2D" parent="pvoimanappi" index="1"]
-position = Vector2(187, 252.5)
+position = Vector2(187, 248.5)
+rotation = 3.1415927
 
 [node name="Käytävä1" parent="pvoimanappi" index="2"]
-position = Vector2(425, 164)
+position = Vector2(-24, 286.5)
 
 [node name="CollisionShape2D" parent="pvoimanappi/Käytävä1" index="0"]
 visible = false
-position = Vector2(-0.75, 0)
+position = Vector2(0.5, 0)
 
 [node name="Käytävä2" parent="pvoimanappi" index="3"]
-position = Vector2(23, -2)
+position = Vector2(257.5, 288)
 
 [node name="CollisionShape2D" parent="pvoimanappi/Käytävä2" index="0"]
 visible = false
-position = Vector2(122.25, 166)
+position = Vector2(-1.5, -1.5)
 
 [editable path="Putket"]
 [editable path="Putket2"]
