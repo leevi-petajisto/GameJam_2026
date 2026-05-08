@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://crycrnsynre7d"]
+[gd_scene load_steps=6 format=4 uid="uid://crycrnsynre7d"]
 
 [ext_resource type="TileSet" uid="uid://f6goe5woacvv" path="res://Scenes/Levels/Level_objekts/platforms.tres" id="1_iixi8"]
 [ext_resource type="PackedScene" uid="uid://c2fxwowbrcga8" path="res://Scenes/Characters/kroko.tscn" id="2_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://bxvbsv23o3veo" path="res://Scenes/Levels/Level_objekts/putket.tscn" id="3_3mqfk"]
+[ext_resource type="AudioStream" uid="uid://4qexv72h7l7q" path="res://Art/Eettinen_Tuotanto/johnnybacon156-fah-469417.mp3" id="3_cyadu"]
 [ext_resource type="PackedScene" uid="uid://bscmx80tp1nr0" path="res://Scenes/Levels/Level_objekts/voittoputki.tscn" id="4_iixi8"]
 
 [node name="Level1" type="Node2D"]
@@ -18,6 +19,9 @@ tile_set = ExtResource("1_iixi8")
 
 [node name="kroko" parent="." instance=ExtResource("2_3mqfk")]
 position = Vector2(282, 309)
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="kroko"]
+stream = ExtResource("3_cyadu")
 
 [node name="Voittoputki" parent="." instance=ExtResource("4_iixi8")]
 z_index = -1

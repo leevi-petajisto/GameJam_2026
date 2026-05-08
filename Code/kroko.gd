@@ -43,6 +43,7 @@ func _handle_jump() -> void:
 		_is_jumping = false
 		var gravity_dir: float = sign(get_gravity().y)
 		velocity.y = -gravity_dir * _jump_velocity
+		$JumpSound.play()
 		_jump_counter += 1
 	var grounded := is_on_ceiling() if get_gravity().y < 0 else is_on_floor()
 	if grounded:
