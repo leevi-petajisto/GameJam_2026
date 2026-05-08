@@ -78,7 +78,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
-text = "Aloita Peli"
+text = "START"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -92,7 +92,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_71mqo")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_n6o43")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dlmu3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_71mqo")
-text = "Sulje Peli"
+text = "QUIT"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -106,7 +106,7 @@ offset_bottom = 206.5
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_6pxni")
 theme_override_font_sizes/font_size = 42
-text = "Super Krökö Brothers"
+text = "FURNIDILE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
