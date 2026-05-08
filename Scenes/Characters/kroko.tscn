@@ -122,8 +122,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7amf"]
-radius = 7.0
-height = 18.0
+radius = 6.0
+height = 16.0
 
 [node name="kroko" type="CharacterBody2D" groups=["Player"]]
 safe_margin = 2.0
@@ -137,5 +137,5 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -8)
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_t7amf")
