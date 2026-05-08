@@ -185,8 +185,7 @@ visible = false
 position = Vector2(543, 261)
 
 [node name="CollisionShape2D" parent="pvoimanappi/Käytävä1" index="0"]
-visible = false
-position = Vector2(30.5, 56.5)
+position = Vector2(29.5, 55.75)
 
 [node name="Käytävä2" parent="pvoimanappi" index="3"]
 position = Vector2(419.5, 102.5)
