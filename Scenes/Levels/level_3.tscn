@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://brvn4hco3vw3w"]
+[gd_scene load_steps=11 format=4 uid="uid://brvn4hco3vw3w"]
 
 [ext_resource type="Texture2D" uid="uid://bvrpdoue503ne" path="res://Art/Eettinen_Tuotanto/ikeadimension.png" id="1_6tcp3"]
 [ext_resource type="PackedScene" uid="uid://c2fxwowbrcga8" path="res://Scenes/Characters/kroko.tscn" id="2_nfly3"]
 [ext_resource type="PackedScene" uid="uid://bscmx80tp1nr0" path="res://Scenes/Levels/Level_objekts/voittoputki.tscn" id="3_nfly3"]
 [ext_resource type="PackedScene" uid="uid://bxvbsv23o3veo" path="res://Scenes/Levels/Level_objekts/putket.tscn" id="4_t8c31"]
 [ext_resource type="Texture2D" uid="uid://bhh0syh6jq3gi" path="res://Art/Eettinen_Tuotanto/putkisetti.png" id="5_rc141"]
+[ext_resource type="AudioStream" uid="uid://4qexv72h7l7q" path="res://Art/Eettinen_Tuotanto/johnnybacon156-fah-469417.mp3" id="6_167vu"]
 [ext_resource type="PackedScene" uid="uid://r0ylpq4s03c6" path="res://Scenes/Levels/Level_objekts/pvoimanappi.tscn" id="6_yy6i0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t8c31"]
@@ -168,6 +169,9 @@ scale = Vector2(1.2, 1.2)
 
 [node name="kroko" parent="." instance=ExtResource("2_nfly3")]
 position = Vector2(392, 495)
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="kroko"]
+stream = ExtResource("6_167vu")
 
 [node name="pvoimanappi" parent="." instance=ExtResource("6_yy6i0")]
 position = Vector2(335, -246)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://bv5l4wc5b6dev"]
+[gd_scene load_steps=6 format=4 uid="uid://bv5l4wc5b6dev"]
 
 [ext_resource type="TileSet" uid="uid://f6goe5woacvv" path="res://Scenes/Levels/Level_objekts/platforms.tres" id="1_efpaj"]
 [ext_resource type="PackedScene" uid="uid://c2fxwowbrcga8" path="res://Scenes/Characters/kroko.tscn" id="2_arbu7"]
 [ext_resource type="TileSet" uid="uid://clar6ykjklk6e" path="res://Scenes/Levels/Level_objekts/background.tres" id="3_arbu7"]
+[ext_resource type="AudioStream" uid="uid://4qexv72h7l7q" path="res://Art/Eettinen_Tuotanto/johnnybacon156-fah-469417.mp3" id="3_sanrf"]
 [ext_resource type="PackedScene" uid="uid://bxvbsv23o3veo" path="res://Scenes/Levels/Level_objekts/putket.tscn" id="4_25y23"]
 
 [node name="Level5" type="Node2D"]
@@ -13,6 +14,9 @@ tile_set = ExtResource("1_efpaj")
 
 [node name="kroko" parent="." instance=ExtResource("2_arbu7")]
 position = Vector2(66, 514)
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="kroko"]
+stream = ExtResource("3_sanrf")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 modulate = Color(1, 1, 1, 0.2)
